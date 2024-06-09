@@ -11,7 +11,7 @@ function BalanceDisplay({ balance }) {
 }
 function mapStateToProps(state) {
   return {
-    balance: state.accountReducer.balance,
+    balance: state.account.balance,
   };
 }
 export default connect(mapStateToProps)(BalanceDisplay);

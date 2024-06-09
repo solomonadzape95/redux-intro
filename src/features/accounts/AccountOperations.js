@@ -13,10 +13,11 @@ function AccountOperations() {
     loan: currentLoan,
     loanPurpose: currentLoanPurpose,
     isLoading,
-  } = useSelector((store) => store.accountReducer);
+  } = useSelector((store) => store.account);
   function handleDeposit() {
     if (!depositAmount) return;
     dispatch(deposit(depositAmount, currency));
+    // dispatch(deposit(depositAmount));p 
     setDepositAmount("");
     setCurrency("USD");
   }
